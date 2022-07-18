@@ -1,0 +1,33 @@
+include ../title/title.pug
+include ../item/item.pug
+
+-
+    const EX_TITLE_ClASS = "experience__title"
+    const EX_SRC = require("./components/experience/experience_icon.png")
+    const EX_TITLE_NAME = "EXPERIENCE"
+    const EX_ALT="experience_icon"
+    const EX_WIDTH="153"
+    const EX_HEIGHT="148"
+    const EX_IMG_CLASS ="experience__img"
+    const EX_NAME_CLASS="item__title_black"
+
+    const EX_ITEM = [
+        {ITEM_TITLE :"AFFIN Hwang Investment Bank Berhad",ITEM_PERIOD: "// Aug 2020 - July 2022",
+         ITEM_DESC:"Software Engineer",
+         ITEM_TEXT:""
+         },
+         {ITEM_TITLE :"Eduvo",ITEM_PERIOD: "// Jun 2015 - Aug 2020",
+         ITEM_DESC:"Software Engineer cum Trainer",
+         ITEM_TEXT:""
+         },
+         {ITEM_TITLE :"BCS Information Systems",ITEM_PERIOD: "// Aug 2008 - Dec 2012",
+         ITEM_DESC:"Software Consultant",
+         ITEM_TEXT:""
+         }
+    ]
+
+div(class ="experience container__experience")
+    +title(title_class||EX_TITLE_ClASS, src||EX_SRC, title_name||EX_TITLE_NAME,alt||EX_ALT,width||EX_WIDTH, height||EX_HEIGHT,img_class||EX_IMG_CLASS)
+    ul(class="experience__list")
+        - for (var i = 0; i < EX_ITEM.length ; i++)
+            +item(EX_ITEM[i].ITEM_TITLE,EX_ITEM[i].ITEM_PERIOD,EX_ITEM[i].ITEM_DESC,EX_ITEM[i].ITEM_TEXT)(class=EX_NAME_CLASS)

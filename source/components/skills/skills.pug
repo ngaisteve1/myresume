@@ -1,0 +1,26 @@
+include ../title/title.pug
+include ../progressdot/progressdot.pug
+
+-
+    const SK_TITLE_ClASS = "skills__title"
+    const SK_SRC = require("./components/skills/skills_icon.png")
+    const SK_TITLE_NAME = "SKILLS"
+    const SK_ALT="skills_icon"
+    const SK_WIDTH="143"
+    const SK_HEIGHT="143"
+    const SK_IMG_CLASS ="skills__img"
+    const SK_ITEM_MAX=12
+
+    const SK_ITEM = [
+        {ITEM_NAME:"C# and ASP.NET Core",ITEM_VALUE:8},
+        {ITEM_NAME:"Javascript",ITEM_VALUE:6},
+        {ITEM_NAME:"VueJs",ITEM_VALUE:6},
+        {ITEM_NAME:"Software Architecture",ITEM_VALUE:5}        
+    ] 
+
+div(class="skills container__skills")
+    +title(title_class||SK_TITLE_ClASS,src||SK_SRC, title_name||SK_TITLE_NAME,alt||SK_ALT,width||SK_WIDTH, height||SK_HEIGHT,img_class||SK_IMG_CLASS)
+    - for (var i = 0; i < SK_ITEM.length; i++)
+        +progressdot(SK_ITEM[i].ITEM_NAME,SK_ITEM_MAX,SK_ITEM[i].ITEM_VALUE)
+
+

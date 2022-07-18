@@ -1,0 +1,28 @@
+include ../title/title.pug
+include ../item/item.pug
+
+-
+    const ED_TITLE_ClASS = "education__title"
+    const ED_SRC = require("./components/education/education_icon.png")
+    const ED_TITLE_NAME = "education"
+    const ED_ALT="education_icon"
+    const ED_WIDTH="148"
+    const ED_HEIGHT="143"
+    const ED_IMG_CLASS ="education__img"
+
+    const ED_ITEM = [
+        {ITEM_NAME :"Bachelor in Computing",ITEM_PERIOD: "2001-2002",
+         ITEM_DESC:"University of Staffordshire",
+         ITEM_TEXT:""
+         },
+         {ITEM_NAME :"Higher Dip. in Software Engineering",ITEM_PERIOD: "1998-2000",
+         ITEM_DESC:"University of APU",
+         ITEM_TEXT:""
+         },         
+    ]
+
+div(class ="education container__education")
+    +title(title_class||ED_TITLE_ClASS,src||ED_SRC, title_name||ED_TITLE_NAME,alt||ED_ALT,width||ED_WIDTH, height||ED_HEIGHT,img_class||ED_IMG_CLASS)
+    ul(class="education__list")
+        - for (var i = 0; i < ED_ITEM.length; i++)
+            +item(ED_ITEM[i].ITEM_NAME,ED_ITEM[i].ITEM_PERIOD,ED_ITEM[i].ITEM_DESC,ED_ITEM[i].ITEM_TEXT)

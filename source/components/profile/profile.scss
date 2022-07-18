@@ -1,0 +1,31 @@
+@import "../../variables";
+
+@mixin text($family, $size, $weight, $margin) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  margin: $margin;
+}
+
+.profile {
+  &__img {
+    width: 12.33rem;
+    height: 11.91rem;
+    margin-right: 2%;
+
+  }
+  &__title {
+    margin-bottom: 2.08rem;
+  }
+
+  &__text {
+    display: block;
+    @include text($font-regular, 2.6rem, 400, 0);
+    line-height: 1.2;
+    letter-spacing: -0.1px;
+  }
+
+  &__span {
+    @include text($font-bold, 2.6rem, 700, 0);
+  }
+}

@@ -1,0 +1,16 @@
+include ../title/title.pug
+-
+    const PR_TITLE_CLASS = "profile__title"
+    const PR_SRC = require("./components/profile/profile_icon.png")
+    const PR_TITLE_NAME = "PROFILE"
+    const PR_ALT="profile_icon"
+    const PR_WIDTH="148"
+    const PR_HEIGHT="143"
+    const PR_IMG_CLASS ="profile__img"
+    const PR_TEXT="Steve Ngai completed his Higher Diploma in Software Engineering in APU University and earned his Computing degree (with Honours) from the University of Staffordshire. Started out as in-house programmer and developed Inventory system, E-Leave system, Sales Order system, Job Recruitment system. Then shifted to do application support for Cheque Clearing system for central banks (Bank Negara) and some banks. Next few years he gave training software engineering courses at growing vocational school which heavily focus on hands-on coding. Now, he works full-time as software engineer (80% back-end, 20% front-end) in an investment bank using modern technologies. He writes clean, maintainable and testable codes consistently and loves to solve complex problems with 'simple' solution. He received Covid-19 vaccinations on 11th June 2021 and booster on 3rd Jan 2022."
+    const PR_ITEM=""
+
+div(class="profile container__profile")
+    +title(title_class||PR_TITLE_CLASS, src||PR_SRC, title_name||PR_TITLE_NAME,alt||PR_ALT,width||PR_WIDTH, height||PR_HEIGHT,img_class||PR_IMG_CLASS)
+    p(class="profile__text") #{text || PR_TEXT}
+        span(class="profile__span") #{item || PR_ITEM}

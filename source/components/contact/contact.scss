@@ -1,0 +1,33 @@
+@import "../../variables";
+
+@mixin text($family, $size, $weight, $color) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+.contact {
+  &__img {
+    width: 11.91rem;
+    height: 11.91rem;
+    margin-right: 2%;
+
+  }
+  &__title {
+    margin-bottom: 5.33rem;
+  }
+  &__item {
+    margin-bottom: 5.16rem;
+    display: flex;
+  }
+  &__name {
+    @include text($font-bold, 3.42rem, 700, $blue);
+    text-transform: uppercase;
+    width: 31%;
+  }
+
+  &__value {
+    @include text($font-regular, 3.42rem, 400, $black);
+  }
+}

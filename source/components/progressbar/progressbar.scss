@@ -1,0 +1,42 @@
+@import "../../variables";
+
+$progress-bar: $grey;
+$progress-value: $blue;
+
+.progressbar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 44%;
+  @media (max-width:1023.98px) {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.progressbar__title {
+  font-family: $font-regular;
+  font-size: 4.25rem;
+  font-weight: 400;
+  color: $black;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 2.17rem;
+}
+
+.progressbar__progress {
+  background-color: $progress-bar;
+  width: 46.17rem;
+  height: 3.83rem;
+  border: none;
+
+  &::-webkit-progress-bar {
+    background-color: $progress-bar;
+  }
+  &::-webkit-progress-value {
+    background-color: $progress-value;
+  }
+  &::-moz-progress-bar {
+    background-color: $progress-value;
+  }
+}

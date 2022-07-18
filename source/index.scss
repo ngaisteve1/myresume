@@ -1,0 +1,138 @@
+@font-face {
+  font-family: MyraidPro-Bold;
+  src: url(./fonts/MyriadPro-Bold.svg) format("svg"),
+    url(./fonts/MyriadPro-Bold.ttf) format("ttf"),
+    url(./fonts/MyriadPro-Bold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MyriadPro-LightSemiExt;
+  src: url(./fonts/MyriadPro-LightSemiExt.svg) format("svg"),
+    url(./fonts/MyriadPro-LightSemiExt.ttf) format("ttf"),
+    url(./fonts/MyriadPro-LightSemiExt.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MyriadPro-Regular;
+  src: url(./fonts/MyriadPro-Regular.svg) format("svg"),
+    url(./fonts/MyriadPro-Regular.ttf) format("ttf"),
+    url(./fonts/MyriadPro-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 12px;
+
+  @media (max-width: 1959.98px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 1439.98px) {
+    font-size: 7px;
+  }
+
+  @media (max-width: 1199.98px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1023.98px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 6.5px;
+  }
+
+  @media (max-width: 424.98px) {
+    font-size: 5px;
+  }
+
+  @media (max-width: 374.98px) {
+    font-size: 4px;
+  }
+
+  @media (max-width: 319.98px) {
+    font-size: 3px;
+  }
+}
+
+.container {
+  max-width: 2480px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1919.98px) {
+    max-width: 100%;
+  }
+  @media (max-width: 1199.98px) {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__column {
+    margin-top: 12.67rem;
+    margin-bottom: 15.92rem;
+
+    @media (max-width: 1199.98px) {
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+    }
+    &_left {
+      margin-left: 5%;
+      margin-right: 3%;
+      max-width: 33.346%;
+
+      @media (max-width: 1199.98px) {
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+
+    &_right {
+      margin-right: 5%;
+      margin-left: 3%;
+      max-width: 51%;
+
+      @media (max-width: 1199.98px) {
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+
+  &__avatar {
+    margin-bottom: 13.75rem;
+  }
+
+  &__profile {
+    margin-bottom: 7.66rem;
+  }
+
+  &__contact {
+    margin-bottom: 7.92rem;
+  }
+
+  &__skills {
+    margin-bottom: 8.92rem;
+  }
+
+  &__education {
+    margin-bottom: 5.75rem;
+  }
+
+  &__experience {
+    margin-bottom: 5.83rem;
+  }
+}
+
+/* * {
+  outline: 1px solid rgb(228, 207, 16);
+} */
